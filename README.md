@@ -1,3 +1,4 @@
+CLICK HERE FOR THE LIVE WEBSITE: https://arya892.github.io/debate-generator/ 
 # 🎙️ AI-Style Debate Generator
 
 A modern, fully responsive web application that generates arguments **FOR** a topic, arguments **AGAINST** it, and provides a **neutral conclusion**. It features a beautifully designed dark/cyberpunk neon user interface with smooth animations.
@@ -21,3 +22,4 @@ debate-generator/
 ├── style.css      # Cyberpunk dark theme styles and layout
 ├── script.js     # Debate dictionary, algorithm, and UI handler
 └── README.md      # Project documentation
+
