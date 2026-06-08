@@ -1,0 +1,200 @@
+/* --- Global Styles & Dark Theme Reset --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+body {
+    background-color: #0f172a; /* Deep cyber dark background */
+    color: #f8fafc; /* Crisp light text */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* --- Container Card Layout --- */
+.container {
+    max-width: 900px;
+    width: 100%;
+    background: #1e293b; /* Darker slate gray for the container */
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+    border: 1px solid #334155;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+header h1 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #f8fafc;
+    letter-spacing: -0.025em;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #94a3b8;
+    font-size: 1.05rem;
+}
+
+/* --- Modern Input Area Styling --- */
+.input-section {
+    display: flex;
+    gap: 14px;
+    margin-bottom: 25px;
+}
+
+#topic-input {
+    flex: 1;
+    padding: 16px 22px;
+    font-size: 1rem;
+    background-color: #0f172a;
+    border: 2px solid #334155;
+    border-radius: 10px;
+    color: #ffffff;
+    outline: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#topic-input:focus {
+    border-color: #38bdf8; /* Glowing neon blue on focus */
+    box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.15);
+}
+
+#generate-btn {
+    background-color: #38bdf8; /* Electric blue button */
+    color: #0f172a;
+    border: none;
+    padding: 16px 28px;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+#generate-btn:hover {
+    background-color: #7dd3fc;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(56, 189, 248, 0.3);
+}
+
+#generate-btn:active {
+    transform: translateY(0);
+}
+
+/* --- Error Messaging --- */
+.error-hidden { display: none; }
+#error-message {
+    color: #f87171;
+    margin-bottom: 20px;
+    font-weight: 500;
+    text-align: center;
+}
+
+/* --- Results Layout --- */
+.results-hidden { display: none; }
+#display-topic {
+    text-align: center;
+    margin: 30px 0;
+    color: #38bdf8;
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+
+/* --- Glow-Border Debate Cards --- */
+.debate-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+.card {
+    background: #0f172a;
+    border-radius: 12px;
+    padding: 24px;
+    border: 1px solid #334155;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+}
+
+/* Cyber Neon Side Accents */
+.card-for { 
+    border-left: 5px solid #4ade80; /* Glowing Neon Green */
+    box-shadow: 0 4px 20px rgba(74, 222, 128, 0.05);
+}
+.card-against { 
+    border-left: 5px solid #f87171; /* Glowing Neon Red */
+    box-shadow: 0 4px 20px rgba(248, 113, 113, 0.05);
+}
+.card-conclusion { 
+    border-left: 5px solid #a78bfa; /* Glowing Purple */
+    box-shadow: 0 4px 20px rgba(167, 139, 250, 0.05);
+    background-color: #0f172a;
+}
+
+.card h3 {
+    margin-bottom: 16px;
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+
+.card-for h3 { color: #4ade80; }
+.card-against h3 { color: #f87171; }
+.card-conclusion h3 { color: #a78bfa; }
+
+.card ul {
+    list-style-type: none;
+}
+
+.card ul li {
+    margin-bottom: 14px;
+    line-height: 1.6;
+    color: #cbd5e1;
+    position: relative;
+    padding-left: 20px;
+}
+
+/* Custom modern dash bullet points */
+.card ul li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.card-for ul li::before { color: #4ade80; }
+.card-against ul li::before { color: #f87171; }
+
+.card-conclusion p {
+    line-height: 1.7;
+    color: #cbd5e1;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    .input-section {
+        flex-direction: column;
+    }
+    
+    .debate-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    header h1 {
+        font-size: 2.2rem;
+    }
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Style Debate Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎙️ Debate Generator</h1>
+            <p>Enter a topic to view arguments from both sides along with a neutral conclusion.</p>
+        </header>
+        <main>
+            <div class="input-section">
+                <input type="text" id="topic-input" placeholder="e.g., Social Media, AI Art, School Uniforms..." autocomplete="off">
+                <button id="generate-btn">Generate Debate</button>
+            </div>
+            <p id="error-message" class="error-hidden"></p>
+            <div id="results-section" class="results-hidden">
+                <h2 id="display-topic"></h2>
+                <div class="debate-grid">
+                    <div class="card card-for">
+                        <h3>👍 Arguments FOR</h3>
+                        <ul id="arguments-for"></ul>
+                    </div>
+                    <div class="card card-against">
+                        <h3>👎 Arguments AGAINST</h3>
+                        <ul id="arguments-against"></ul>
+                    </div>
+                </div>
+                <div class="card card-conclusion">
+                    <h3>⚖️ Neutral Conclusion</h3>
+                    <p id="neutral-conclusion"></p>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
